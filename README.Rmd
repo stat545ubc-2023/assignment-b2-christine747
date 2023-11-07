@@ -2,8 +2,6 @@
 output: github_document
 ---
 
-<!-- README.md is generated from README.Rmd. Please edit that file -->
-
 ```{r, include = FALSE}
 knitr::opts_chunk$set(
   collapse = TRUE,
@@ -21,7 +19,7 @@ The goal of countMissingValues is to count missing values for all columns by gro
 ## Installation
 
 You can install the development version of countMissingValues from [GitHub](https://github.com/) with:
-```{r}
+``` r
 #install.packages("devtools")
 devtools::install_github("stat545ubc-2023/countMissingValues")
 ```
@@ -29,7 +27,7 @@ devtools::install_github("stat545ubc-2023/countMissingValues")
 ## Examples
 
 This example computes the number of missing values in the `airquality` dataset grouped by the `cyl` column. 
-```{r}
+```{r example}
 library(countMissingValues)
 
 count_all_missing_by_group(airquality, Month)
@@ -37,13 +35,13 @@ count_all_missing_by_group(airquality, Month)
 
 
 This example has the same output as the last example, but shows off an alternative way of invoking the `count_all_missing_by_group()`: piping the dataset into the function. 
-```{r}
+```{r example 2}
 airquality |> count_all_missing_by_group(Month) 
 ```
 
 
 The optional `.groups` argument allows us to keep the output grouped by the grouping column. See example below; notice how the output is a grouped tibble, rather than the ungrouped tibble output of the earlier examples. 
-```{r}
+```{r example 3}
 count_all_missing_by_group(airquality, Month, .groups = "keep")
 ```
 

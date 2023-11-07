@@ -1,6 +1,4 @@
 
-<!-- README.md is generated from README.Rmd. Please edit that file -->
-
 ## countMissingValues
 
 <!-- badges: start -->
@@ -20,8 +18,6 @@ You can install the development version of countMissingValues from
 ``` r
 #install.packages("devtools")
 devtools::install_github("stat545ubc-2023/countMissingValues")
-#> Skipping install of 'countMissingValues' from a github remote, the SHA1 (3d42d21b) has not changed since last install.
-#>   Use `force = TRUE` to force installation
 ```
 
 ## Examples
